@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+
+namespace Solution 
+{
+    class Vehicle
+    {
+        int passenger_count;
+        string make;
+        string model;
+
+        public int Passenger_count { get => passenger_count; set => passenger_count = value; }
+        public string Make { get => make; set => make = value; }
+        public string Model { get => model; set => model = value; }
+    }
+    
+    class Solution 
+    {
+        static void Main(string[] args) 
+        {
+            List<Sedan> sedanlist = new List<Sedan>();
+            List<SUV> suvlist = new List<SUV>();
+            int n=Convert.ToInt32(Console.ReadLine());
+
+            // Write code for the programming login to find number of SUVs and Sedans
+            for(int i=0;i<n;i++){
+                int pass=Convert.ToInt16(Console.ReadLine());
+                if(pass==4){
+                    Sedan se=new Sedan();
+                    se.Passenger_count=pass;
+                    se.Make=Console.ReadLine();
+                    se.Model=Console.ReadLine();
+                    se.Boot=Convert.ToInt32(Console.ReadLine());
+                    sedanlist.Add(se);
+                }
+                else if(pass==7){
+                    SUV su=new SUV();
+                    su.Passenger_count=pass;
+                    su.Make=Console.ReadLine();
+                    su.Model=Console.ReadLine();
+                    su.Boot=Convert.ToInt32(Console.ReadLine());
+                    suvlist.Add(su);
+
+                }
+            }
+
+            Console.WriteLine("Number of SUVs : "+ suvlist.Count);
+            Console.WriteLine("Number of Sedans : "+ sedanlist.Count);
+        }
+    }
+
+    // Write code for inheriting the property from vehicle class. This class should be used for classifying vehicle type.
+    class Sedan:Vehicle{
+         int boot;
+         public int Boot { get => boot; set => boot = value; }
+    }
+    class SUV:Vehicle{
+        int boot;
+        public int Boot { get => boot; set => boot = value; }
+    }
+
+}
