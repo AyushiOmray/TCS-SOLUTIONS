@@ -1,0 +1,45 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+
+public class Program{
+    public static void Main(){
+        int ll = Int32.Parse(Console.ReadLine());
+        int ul = Int32.Parse(Console.ReadLine());
+        
+        int output = Unique(ll,ul);
+        Console.WriteLine(output);
+    }
+    
+   public static int Unique(int ll,int ul){
+       int c = 0;
+       for(int i=ll;i<=ul;i++){
+           bool f = CheckDigits(i);
+           if(f==true){
+               c=c+1;
+           }
+       }
+       
+       return c;
+   }
+   
+   static bool CheckDigits(int i){
+       List<int> d = new List<int>();
+       while(i>0){
+           int temp = i%10;
+           d.Add(temp);
+           i = i/10;
+       }
+       
+       d.Sort();
+       
+       for(int j=0;j<d.Count()-1;j++){
+           if(d[j]==d[j+1]){
+               return false;
+           }
+       }
+       
+       return true;
+   }
+}
