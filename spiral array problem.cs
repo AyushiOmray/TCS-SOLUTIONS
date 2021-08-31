@@ -8,6 +8,8 @@ class Program
     {
         int m = Int32.Parse(Console.ReadLine());
         int n = Int32.Parse(Console.ReadLine());
+        //m = 3; 
+        //n = 3;
         int[,] arr = new int[m,n]; 
         int num = 1;
       for(int p = 0 ; p < m ; p++){
