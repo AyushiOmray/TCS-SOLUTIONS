@@ -34,3 +34,8 @@ class Program
         return p;
     }
 }
+
+
+/*
+Code to find the least number whose digit's product will equal to our input
+*/
