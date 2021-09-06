@@ -21,7 +21,7 @@ class Program
         //List<string> l = new List<string>(str);
         l.Remove("carrot");
         
-        Array.Resize(ref str, 4);
+        Array.Resize(ref str, str.Length-1);
         
         for(int i=0;i<4;i++){
             str[i] = l[i];
