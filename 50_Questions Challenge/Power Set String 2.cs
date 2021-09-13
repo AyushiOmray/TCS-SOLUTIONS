@@ -9,11 +9,12 @@ class Program
     
     static void Main()
     {
-       string[] str = new string[]{"a","b","c","d"};
+       string[] str = new string[]{"a","b","c"};
        Subset(str);
        
        foreach(var v in l){
-          Console.WriteLine(v);
+           string k = String.Join("",v);
+          Console.WriteLine(k);
        }
     }
     
@@ -22,11 +23,10 @@ class Program
         helper(s,sub,0);
     } 
     
-    static List<string> l = new List<string>();
+    static List<string[]> l = new List<string[]>();
     static void helper(string[] arr,string[] sub,int p){
         if(p==arr.Length){
-           string k =String.Join("",sub);
-           l.Add(k);
+           l.Add(sub);
         }
         else{
             
@@ -39,3 +39,7 @@ class Program
     
     
 }
+
+/*
+It doesn't work as expected as sub is an array and we are passing the refrence and it converts the last value of array to string 
+*/
