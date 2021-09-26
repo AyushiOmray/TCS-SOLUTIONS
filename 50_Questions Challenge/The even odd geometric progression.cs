@@ -24,3 +24,8 @@ class MyClass{
         
     }
 }
+
+/*
+Input : 16
+Output: 2187
+*/
