@@ -18,6 +18,7 @@ namespace myapp
          else if(c>='A' && c<='Z'){
              Console.WriteLine("Upper Alphabet");
          }
+         //TRY PARSE IMPLEMENTATION
          else if(Int32.TryParse(c.ToString(),out i)){
              Console.WriteLine("Number");
          }

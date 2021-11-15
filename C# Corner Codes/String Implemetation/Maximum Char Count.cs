@@ -30,3 +30,9 @@ public class MyClass{
         Console.WriteLine(wordc[k]);
     }
 }
+
+/*
+Input: Torrento
+Output: 2
+
+*/
